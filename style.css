@@ -1,0 +1,111 @@
+/**
+ * COSC Commit Counter Styles
+ * Clean, responsive styling with CSS variables for easy theming
+ */
+
+:root {
+    --primary-color: #2c3e50;
+    --increment-color: #2ecc71;
+    --increment-hover: #27ae60;
+    --decrement-color: #e74c3c;
+    --decrement-hover: #c0392b;
+    --reset-color: #3498db;
+    --reset-hover: #2980b9;
+    --bg-color: #f5f5f5;
+    --counter-bg: #ecf0f1;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+}
+
+/* Main container styling */
+.counter-container {
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Title styling */
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Counter display styling */
+.counter-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: var(--counter-bg);
+    border-radius: 5px;
+}
+
+/* Button group layout */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Base button styling */
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+/* Specific button colors */
+#increment {
+    background-color: var(--increment-color);
+    color: white;
+}
+
+#decrement {
+    background-color: var(--decrement-color);
+    color: white;
+}
+
+#reset {
+    background-color: var(--reset-color);
+    color: white;
+}
+
+/* Hover states */
+#increment:hover {
+    background-color: var(--increment-hover);
+    transform: translateY(-2px);
+}
+
+#decrement:hover {
+    background-color: var(--decrement-hover);
+    transform: translateY(-2px);
+}
+
+#reset:hover {
+    background-color: var(--reset-hover);
+    transform: translateY(-2px);
+}
+
+/* Active state for buttons */
+button:active {
+    transform: translateY(0);
+}
